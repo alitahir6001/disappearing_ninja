@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappearing Ninja Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+        $('img').click(function() { // Select all images, and when i click the image...
+        $(this).fadeOut(); // fade the image out. I used $this so I didn't have to write out a line of code for each of the images (like the video demo described)
+    });
+
+        $('button').click(function () { // Select all buttons (luckily there's only one for this assignment) and when i click the button...
+        $('img').fadeIn(); // all images fade back in.
+        alert("there they are!");
+    });
+})
+// dont necessarily need to target the containers with # because it'll disappear all the images at once. 
+
+
+    </script>
+
+</head>
+
+<body>
+<h1>Disappearing Ninja!</h1>
+    <div id="ninja"> 
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+    </div>
+    <!-- Made two separate containers to get a two rows of 4 images each -->
+<br>
+
+    <div id="gaiden">
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+        <img src="img/ninjagaiden.jpg" alt="ryu">
+    </div> 
+
+<br>
+
+    <button>Where'd my games go?!</button>
+
+</body>
+</html>
